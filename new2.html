@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>design</title>
+    <link rel="stylesheet" href="new2s.css">
+</head>
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
+
+    <div id="hero">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <button type="btn"><a href="index.html">Explore</button>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+       <div class="info">
+       
+           <h1>Discover</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque non repellendus quidem ipsa incidunt tempora a, odio dolorum iste veritatis odit voluptatem, id voluptates est quos veniam nesciunt cupiditate optio architecto ipsum commodi delectus eveniet maiores! Repellendus aperiam ea veritatis eius necessitatibus, ipsam ratione earum quod commodi ullam, consectetur amet?
+
+           </p>
+           <input type="text" name="search" placeholder="Search">
+       </div>
+      </div>
+      <div class="slider">
+          <img src="img/rarr4.png" id="prev">
+          <div class="preview">
+             <img src="img/r3.png" class=" active thumbnail">
+             <img src="img/r2.jpg" class="thumbnail">
+             <img src="img/r1.jpg" class="thumbnail">
+             <img src="img/r4.jpg" class="thumbnail">
+             <img src="img/r5.jpg" class="thumbnail">
+
+          </div>
+          <img src="img/rarr4.png" id="next">
+
+
+      </div>
+    </div>
+
+    <script>
+        var prev=document.getElementById("prev");
+        var next=document.getElementById("next");
+        var thumbnail=document.getElementsByClassName("thumbnail");
+        var hero=document.getElementById("hero");
+        var background=new Array(
+            "img/r3.png","img/r2.jpg","img/r1.jpg","img/r4.jpg","img/r5.jpg",
+        );
+        let i=0;
+      next.onclick= function()
+      {
+          if(i<4)
+          {
+          hero.style.backgroundImage='url("'+background[i+1]+'")';
+          thumbnail[i+1].classList.add("active");
+          thumbnail[i].classList.remove("active");
+
+         i++;
+          }
+      }
+      prev.onclick= function()
+      {
+          if(i>0)
+          {
+          hero.style.backgroundImage='url("'+background[i-1]+'")';
+          thumbnail[i-1].classList.add("active");
+          thumbnail[i].classList.remove("active");
+         i--;
+          }
+      }
+    </script>
+
+</body>
+</html>
